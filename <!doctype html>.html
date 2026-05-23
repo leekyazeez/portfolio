@@ -1,0 +1,100 @@
+<!doctype html>
+--bg: #0b0f17; --card:#111827; --muted:#9aa4b2; --text:#e5e7eb; --accent:#60a5fa; --border:#1f2937;
+}
+*{box-sizing:border-box}
+html,body{margin:0; padding:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1000px; margin:0 auto; padding:24px}
+.nav{display:flex; gap:18px; justify-content:flex-end; padding:12px 0; border-bottom:1px solid var(--border); position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:linear-gradient( to bottom, rgba(11,15,23,.85), rgba(11,15,23,.6));}
+.nav a{font-weight:600}
+.hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:48px 0}
+.hero h1{font-size:clamp(28px, 5vw, 44px); line-height:1.1; margin:0 0 12px}
+.badge{display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:12px; color:var(--muted);}
+.cta{display:flex; gap:12px; margin-top:18px}
+.btn{padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:#0f172a; color:var(--text); font-weight:600}
+.btn.primary{background:linear-gradient(135deg, #2563eb, #60a5fa); border-color:#1e3a8a}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+.card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px}
+.card h3{margin:0 0 8px}
+.muted{color:var(--muted)}
+.section{padding:36px 0}
+.footer{border-top:1px solid var(--border); padding:18px 0; color:var(--muted); font-size:14px}
+.avatar{width:100%; aspect-ratio:1/1; border-radius:14px; border:1px solid var(--border); background:radial-gradient(120% 120% at 10% 10%, #1f2937, #0b0f17)}
+.skills{display:flex; flex-wrap:wrap; gap:10px}
+.chip{border:1px solid var(--border); background:#0f172a; padding:6px 10px; border-radius:999px; font-size:13px}
+@media (max-width: 800px){ .hero{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+</nav>
+
+<header class="hero">
+<div>
+<span class="badge">Open‑source learner • Developer</span>
+<h1>Hi, I'm <strong>Your Name</strong> — I build simple, useful apps and share the code.</h1>
+<p class="muted">This is my minimal, fast portfolio site. Explore my projects below and reach out if you'd like to collaborate.</p>
+<div class="cta">
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn" href="resume.pdf" download>Download Résumé</a>
+</div>
+</div>
+<img class="avatar" alt="Your avatar placeholder" />
+</header>
+
+<section id="projects" class="section">
+<h2>Projects</h2>
+<div class="card-grid">
+<article class="card">
+<h3>Weather App</h3>
+<p class="muted">Simple app fetching live weather data from an API.</p>
+<p><strong>Stack:</strong> HTML, JS, Fetch API</p>
+<p><a href="#">Live</a> · <a href="#">Repo</a></p>
+</article>
+<article class="card">
+<h3>To‑Do List</h3>
+<p class="muted">Add, complete, and delete tasks with local storage.</p>
+<p><strong>Stack:</strong> HTML, JS</p>
+<p><a href="#">Live</a> · <a href="#">Repo</a></p>
+</article>
+<article class="card">
+<h3>Calculator</h3>
+<p class="muted">A clean, accessible calculator with keyboard support.</p>
+<p><strong>Stack:</strong> HTML, CSS, JS</p>
+<p><a href="#">Live</a> · <a href="#">Repo</a></p>
+</article>
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2>Skills</h2>
+<div class="skills">
+<span class="chip">Python</span>
+<span class="chip">JavaScript</span>
+<span class="chip">HTML/CSS</span>
+<span class="chip">Flask</span>
+<span class="chip">Git & GitHub</span>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Best way to reach me is email: <a href="mailto:you@example.com">you@example.com</a></p>
+<p>Or send a DM on <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>.</p>
+</section>
+
+<footer class="footer">
+<span>© <span id="year"></span> Your Name</span>
+</footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
