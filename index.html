@@ -1,57 +1,373 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"
-    <title>Portfolio ALI ABDUL_AZEEZ</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-        nav {
-            background-color: #111;
-            padding: 15px 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Abdul-Azeez Portfolio</title>
 
-        nav a {color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        nav a:hover {   color:#00bfff;}
+html{
+    scroll-behavior:smooth;
+}
 
-        h1 {margin-top: 50px;font-size: 36px;   color: #333;}
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
 
-    </style>
+nav{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin:8px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 24px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.skills{
+    text-align:center;
+}
+
+.skills span{
+    display:inline-block;
+    background:#1e293b;
+    margin:10px;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.resume,
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    background:#111827;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
 </head>
+
 <body>
-    <nav>
-        <a href="#projects">Projects</a> |
-        <a href="#skills">Skills</a> |
-        <a href="#contact">Contact</a> |
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        </nav>
-    <h1>hello world</h1>
-    <main>
-        <section id="projects">
-            <h2>projects</h2>
-            <ul>
-                <li>weather app - <a href="#">Live</a> <a href="#">repo</a></li>
-                <li>To-do list - <a href="#">Live</a>  <a href="#"></a>repo</a>></li>
-                <li>Calculator - <a href="#">Live</a>  <a href="#">Repo</a></li>
 
-            </ul>
-        </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <section id ="skills"
-            <h2>skills</h2>
-            <p>Python | JavaScript| HTML/CSS| Git/Github</p>
-            </section>
+<section class="hero">
 
-            <SECTION ID="Contact">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:Aliabdul0613@gmail.com">Aliabdul0613@gmail.com</a></p>
-            </SECTION>
-    </main>
+    <h1>Ali Abdul-Azeez</h1>
+
+    <p>Computer Science Student at Georgia State University</p>
+
+    <p>Web Developer | AI Enthusiast</p>
+
+    <p>Oracle Certified AI Foundations Associate</p>
+
+    <a class="btn"
+       href="https://github.com/leekyazeez"
+       target="_blank">
+       GitHub
+    </a>
+
+    <a class="btn"
+       href="https://www.linkedin.com/in/ali-abdul-azeez-352b80410"
+       target="_blank">
+       LinkedIn
+    </a>
+
+    <a class="btn"
+       href="https://app.joinhandshake.com/profiles/rj3mpm"
+       target="_blank">
+       Handshake
+    </a>
+
+    <a class="btn"
+       href="resume.pdf"
+       target="_blank">
+       Resume
+    </a>
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a Computer Science student at Georgia State University
+            passionate about software development, web development,
+            and Artificial Intelligence.
+
+            I hold the Oracle Cloud Infrastructure 2025 Certified AI
+            Foundations Associate certification and enjoy building
+            websites, solving problems with code, and exploring AI
+            technologies that create innovative solutions.
+
+            I am actively seeking internship opportunities and
+            freelance projects where I can apply my technical skills,
+            gain real-world experience, and continue growing as a
+            software developer.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Personal portfolio website built using HTML and CSS.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Weather App</h3>
+            <p>
+                Displays weather information using APIs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>To-Do List App</h3>
+            <p>
+                Task management application built with JavaScript.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Calculator</h3>
+            <p>
+                Interactive calculator built using HTML, CSS,
+                and JavaScript.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <div class="card">
+
+        <h3>
+            Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+        </h3>
+
+        <p>
+            Earned August 2025. Certification focused on Artificial
+            Intelligence, Machine Learning, Generative AI, and
+            Oracle Cloud AI technologies.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>SQL</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Artificial Intelligence</span>
+
+    </div>
+
+</section>
+
+<section id="resume">
+
+    <h2>Resume</h2>
+
+    <div class="resume">
+
+        <p>
+            Download my resume below.
+        </p>
+
+        <br>
+
+        <a class="btn"
+           href="resume.pdf"
+           target="_blank">
+           Download Resume
+        </a>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="contact">
+
+        <p>
+            Email:
+            <a href="mailto:ali.aazeez05@gmail.com">
+                ali.aazeez05@gmail.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/leekyazeez" target="_blank">
+                github.com/leekyazeez
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/ali-abdul-azeez-352b80410"
+               target="_blank">
+                Ali Abdul-Azeez
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            Handshake:
+            <a href="https://app.joinhandshake.com/profiles/rj3mpm"
+               target="_blank">
+                Ali Abdul-Azeez
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            Available for internships and freelance opportunities.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Ali Abdul-Azeez
+    </p>
+
+</footer>
+
 </body>
 </html>
